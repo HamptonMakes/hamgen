@@ -1,4 +1,4 @@
-@path = "../shawns-rails3-template/lib/"
+@path = "../shawns-rails3-template/templates/"
 
 # REQUIRED GEMS
 require "colored"
