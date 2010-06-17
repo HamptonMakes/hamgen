@@ -12,8 +12,8 @@ You need the following RubyGems at these *minimum* versions:
 
   1. To begin, make sure the `shawns-rails3-template` directory is in the parent directory where you're creating your new project.
 
-  2. Run `**rails {app} -m ./shawns-rails3-template/init.rb**` -- where {app} is the name you wish to give your project.
-    > Rails will then setup as normal, with the final step loading the `init.rb` that applies the template files into the new project..
+  2. Run `rails {app} -m ./shawns-rails3-template/init.rb` &mdash; where _{app}_ is the name you wish to give your project.
+    > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
 
 
 ## Getting Started (from an existing Rails 3 app)
@@ -22,7 +22,7 @@ You need the following RubyGems at these *minimum* versions:
   2.
     From the parent directory, run:
 
-    `**rails {app} -m ./shawns-rails3-template/init.rb**`
+    `rails {app} -m ./shawns-rails3-template/init.rb`
 
     > You'll be prompted asking if you want to overwrite various files. In each instance, type `n` for No.
 
@@ -34,12 +34,12 @@ The defaults in this project _do not_ support anything below **IE7**. Instead, u
 comments, all javascript is removed and IE 6 and below are served with the [Universal IE6 CSS](http://code.google.com/p/universal-ie6-css/)
 stylesheet. The content is readable and accessible in these browsers, but presented with a simpler style.
 
-If you wish to do any further over rides to this base CSS, you can do so in the `ie6.sass` file located in the root of the `/stylesheets` directory.
+If you wish to do any further over rides to this base CSS, you can do so in the `ie6.sass` file located in the root of the `/sass` directory.
 
 IE 7 and 8 also gain the addition of the [ie7-js library](http://code.google.com/p/ie7-js/), which helps implement some of the more advanced CSS selectors.
 See that site for more information and examples.
 
-There is also meta information setup in `/src/layouts/application.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
+There is also meta information setup in `/layouts/application.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
 
 ## Sass
 
@@ -109,19 +109,19 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
   </tr>
   <tr>
     <td>+g</td>
-    <td><em>"Grid"</em> &mdash; Set element background to 10px by 10px grid.</td>
+    <td><em>Grid</em> &mdash; Set element background to 10px by 10px grid.</td>
   </tr>
   <tr>
     <td>+c</td>
-    <td><em>"Columns"</em> &mdash; Set element background to typographic columns (16 rows.)</td>
+    <td><em>Columns</em> &mdash; Set element background to typographic columns (16 rows.)</td>
   </tr>
   <tr>
     <td>+o</td>
-    <td><em>"Quick Outline"</em> &mdash; Quickly outline a tag.</td>
+    <td><em>Quick Outline</em> &mdash; Quickly outline a tag.</td>
   </tr>
   <tr>
     <td>+n</td>
-    <td><em>"Nested Outlines"</em> &mdash; Do a cascading series of outlines around elements by hierarchy.</td>
+    <td><em>Nested Outlines</em> &mdash; Do a cascading series of outlines around elements by hierarchy.</td>
   </tr>
 </table>
 
@@ -133,11 +133,11 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
   </tr>
   <tr>
     <td>+h</td>
-    <td><em>"Hide Text"</em> &mdash; If you wish to replace the text inside a tag with an image using CSS, this mixin will write the Sass needed to properly hide the content.</td>
+    <td><em>Hide Text</em> &mdash; If you wish to replace the text inside a tag with an image using CSS, this mixin will write the Sass needed to properly hide the content.</td>
   </tr>
   <tr>
     <td>+r</td>
-    <td><em>"Link Reset"</em> &mdash; Resets borders and padding. Works in conjunction with +h if you're replacing text inside a link.</td>
+    <td><em>Link Reset</em> &mdash; Resets borders and padding. Works in conjunction with +h if you're replacing text inside a link.</td>
   </tr>
 </table>
 
