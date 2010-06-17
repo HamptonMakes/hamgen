@@ -217,6 +217,10 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <td>$x-large</td>
     <td>34px</td>
   </tr>
+  <tr>
+    <td>$xx-large</td>
+    <td>55px</td>
+  </tr>
 </table>
 <br>
 #### Sass Syntax
