@@ -39,7 +39,7 @@ If you wish to do any further over rides to this base CSS, you can do so in the 
 IE 7 and 8 also gain the addition of the [ie7-js library](http://code.google.com/p/ie7-js/), which helps implement some of the more advanced CSS selectors.
 See that site for more information and examples.
 
-There is also meta information setup in `/layouts/application.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
+There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
 
 ## Sass
 
