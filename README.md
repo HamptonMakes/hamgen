@@ -56,7 +56,7 @@ There is also meta information setup in `application.html.haml` to set IE8 to `e
         * **/media** (CSS Media Types.)
             * \_mobile.sass
             * \_print.sass
-        * **style** (Place your project-specific Sass in this directory.)
+        * **/style** (Place your project-specific Sass in this directory.)
            * \_common.sass (Reusable classes, tag redefinitions, etc.)
            * \_template.sass (Building blocks of the layout; header, footer, nav, etc.)
 
