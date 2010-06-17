@@ -6,6 +6,8 @@ You need the following RubyGems at these *minimum* versions:
   * `rails` **3.0.0.beta3**
   * `haml` **3.0.12**
   * `colored` **1.2**
+  
+_Ruby 1.9.x is probably the way to go, as well._  
 
 
 ## Getting Started (creating a new Rails 3 app)
