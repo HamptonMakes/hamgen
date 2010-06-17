@@ -1,0 +1,13 @@
+@media print
+  body
+    :color                  black
+    :background             white
+    :font-size              12pt
+  a:after, abbr[title]:after
+    :font-size              75%
+  a:after
+    :content               " (" attr(href) ") "
+  abbr[title]
+    :border                 0
+    &:after
+      :content             " (" attr(title) ") "

@@ -1,0 +1,116 @@
+// ----------------------
+   Hard Tag Reset
+   ----------------------
+a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, footer,
+h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, legend, li, menu,
+nav, ol, p, q, section, select, small, table, textarea, td, th, tr, ul
+  :font
+    :size                   100%
+    :style                  normal
+    :weight                 normal
+  :line-height              1
+  :margin                   0
+  :padding                  0
+  :vertical-align           baseline
+
+// ----------------------
+   Setting Blocks
+   ----------------------
+article, aside, footer, header, hgroup, img, label, menu, nav, section
+  :display                  block
+
+// ----------------------
+   Typography
+   ----------------------
+h1, h2, h3, h4, h5, h6, p, table, li, fieldset
+  :margin-bottom            $font_size
+
+p
+  :line-height              $font_size * 1.55
+
+// ----------------------
+   <body> Reset
+   ----------------------
+body, textarea
+  :font-family              $font_family
+
+body
+  :background               $body_background
+  :font-size                $font_size
+  :-webkit-text-stroke      1px transparent
+
+body, legend
+  :color                    $font_colour
+
+// ----------------------
+   Links
+   ----------------------
+a, abbr[title]
+  :padding-bottom           1px
+
+a
+  :border-bottom            1px solid
+  :color                    $link_colour
+  :outline                  0
+  :text-decoration          none
+  &:hover
+    :color                  $hover_colour
+  &:hover, &:focus
+    :border-bottom          0
+  &:focus
+    :background             $focus_background
+  &:active
+    :color                  $active_colour
+  img
+    :border                 0
+
+// --------------------
+   Tables + Forms
+   --------------------
+table
+  :border
+    :collapse               collapse
+    :spacing                0
+  :width                    100%
+
+caption, legend, td, th
+  :text-align               left
+
+td, th, input, select
+  :vertical-align           middle
+
+fieldset, input[type="checkbox"], input[type="radio"]
+  :border                   0
+
+button, input[type="checkbox"], input[type="radio"], input[type="submit"], select
+  :cursor                   pointer
+
+input[type="checkbox"] + label, input[type="radio"] + label
+  :display                  inline-block
+  :vertical-align          -1px
+  :.vertical-align          baseline
+
+button
+  :.vertical-align          middle
+
+input
+  &[type="submit"], &[type="button"]
+    :.padding               2px 0 0
+
+legend
+  :.margin-left            -6px
+
+// ----------------------
+   Misc
+   ----------------------
+abbr[title]
+  :border-bottom            1px dotted
+  :cursor                   help
+
+q
+  :quotes                   none
+  &:before, &:after
+    :content                ""
+
+ul, ol
+  :list-style               none
