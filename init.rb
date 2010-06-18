@@ -8,10 +8,10 @@ require "bundler"
 
 # START THIS THING
 puts  "---------------------------------------------------------"
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.0] ".yellow.bold
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.1] ".yellow.bold
 puts  "---------------------------------------------------------"
 
-# REMOVE USELESS FILES
+# REMOVE FILES
 puts  " Removing useless junk ... ".red
 puts  "---------------------------------------------------------"
 run   "rm README"
@@ -23,7 +23,7 @@ run   "rm -f public/javascripts/*"
 run   "rm app/views/layouts/application.html.erb"
 puts  "---------------------------------------------------------"
 
-# REMOVE USELESS FILES
+# ADD FILES
 puts  " Adding useful junk ... ".green
 puts  "---------------------------------------------------------"
 run   "cp #{@path}application.html.haml app/views/layouts"
