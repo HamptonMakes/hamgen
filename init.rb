@@ -8,7 +8,7 @@ require "bundler"
 
 # START THIS THING
 puts  "---------------------------------------------------------"
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.2] ".yellow.bold
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.3] ".yellow.bold
 puts  "---------------------------------------------------------"
 
 # REMOVE FILES
@@ -51,7 +51,7 @@ puts  "---------------------------------------------------------"
 puts  " Installing Sass directory and files ...".green
 puts  "---------------------------------------------------------"
 run   "cp -r #{@path}sass app/"
-run   "cp #{@path}plugins.rb config/initializer"
+run   "cp #{@path}plugins.rb config/initializers/"
 run   "cat #{@path}environment.rb >> config/environment.rb"
 puts  "---------------------------------------------------------"
 
