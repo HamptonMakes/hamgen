@@ -8,7 +8,7 @@ require "bundler"
 
 # START THIS THING
 puts  "---------------------------------------------------------"
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.4] ".yellow.bold
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.1.5] ".yellow.bold
 puts  "---------------------------------------------------------"
 
 # REMOVE FILES
