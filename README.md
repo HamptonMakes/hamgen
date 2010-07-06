@@ -15,9 +15,11 @@ _Ruby 1.9.x is probably the way to go, as well._
   1. To begin, make sure the `shawns-rails3-template` directory is in the parent directory where you're creating your new project.
 
   2. Run `rails {app} -m ./shawns-rails3-template/init.rb` &mdash; where _{app}_ is the name you wish to give your project.
-    > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
     
-    > If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
+    > 
+      Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
+    
+      If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
 
 <br>
 ## Internet Explorer Support
