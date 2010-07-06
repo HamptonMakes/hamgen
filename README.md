@@ -18,9 +18,8 @@ _Ruby 1.9.x is probably the way to go, as well._
     
      > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
   
-  If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
+  If you run this on a previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
 
-<br>
 ## Internet Explorer Support
 
 The defaults in this project _do not_ support anything below **IE7**. Instead, using conditional
