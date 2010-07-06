@@ -17,8 +17,8 @@ _Ruby 1.9.x is probably the way to go, as well._
   2. Run `rails {app} -m ./shawns-rails3-template/init.rb` &mdash; where _{app}_ is the name you wish to give your project.
     
      > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
-     <br><br>
-     > If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
+  
+  If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
 
 <br>
 ## Internet Explorer Support
