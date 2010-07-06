@@ -10,24 +10,14 @@ You need the following RubyGems at these *minimum* versions:
     
 _Ruby 1.9.x is probably the way to go, as well._  
 
-## Getting Started (creating a new Rails 3 app)
+## Getting Started
 
   1. To begin, make sure the `shawns-rails3-template` directory is in the parent directory where you're creating your new project.
 
   2. Run `rails {app} -m ./shawns-rails3-template/init.rb` &mdash; where _{app}_ is the name you wish to give your project.
     > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
-
-
-## Getting Started (from an existing Rails 3 app)
-  1. To begin, make sure the `shawns-rails3-template` directory is in the parent directory of your existing project.
-
-  2.
-    From the parent directory, run:
-
-    `rails {app} -m ./shawns-rails3-template/init.rb`
-
-    > You'll be prompted asking if you want to overwrite various files. In each instance, type `n` for No.
-
+    
+    > If you run this in an previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
 
 <br>
 ## Internet Explorer Support
