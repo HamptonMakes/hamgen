@@ -41,6 +41,7 @@
   :filter                                 unquote("alpha(opacity=") + $opacity + unquote(")")
   :opacity                                $opacity * 0.01
 
+// Hide text
 =h(                                       $indent: -9999em)
   :display                                block
   :font-size                              0
@@ -50,8 +51,7 @@
     :transform                            capitalize
   :white-space                            nowrap
 
+// Reset default link styling
 =r
   :border                                 0
   :padding                                0
-
-
