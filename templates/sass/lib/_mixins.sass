@@ -8,6 +8,10 @@
   :-moz-transform                         $transform
   :-webkit-transform                      $transform
 
+// Use the CC3 Pie -- http://css3pie.com/about/
+=p
+  :behavior                               url('/stylesheets/PIE.htc')
+
 // If you want to have multiple box shadows, you must enclose the values in quotes (" ").
 =box-shadow(                              $shadow)
   $shadow:                                unquote($shadow)
