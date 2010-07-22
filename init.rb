@@ -7,11 +7,12 @@ require "haml"
 require "bundler"
 
 # START THIS THING
-puts  "---------------------------------------------------------"
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.3.2] ".yellow.bold
-puts  "---------------------------------------------------------"
+puts  "\n========================================================="
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.4.0] ".yellow.bold
+puts  "=========================================================\n\n"
 
 # REMOVE FILES
+puts  "---------------------------------------------------------"
 puts  " Removing useless junk ... ".red
 puts  "---------------------------------------------------------"
 run   "rm README"
@@ -41,14 +42,14 @@ git   :add => "."
 puts  "---------------------------------------------------------"
 
 # JAVASCRIPT
-puts  " Installing Javascript files ...".green
+puts  " Adding Javascript files ...".green
 puts  "---------------------------------------------------------"
 run   "cp #{@path}javascripts/application.js public/javascripts"
 run   "cp #{@path}javascripts/rails.js public/javascripts"
 puts  "---------------------------------------------------------"
 
 # SASS
-puts  " Installing Sass directory and files ...".green
+puts  " Installing Sass directory, files and environment preferences ...".green
 puts  "---------------------------------------------------------"
 run   "cp -r #{@path}sass app/"
 run   "cp #{@path}plugins.rb config/initializers/"
@@ -69,9 +70,9 @@ puts  "---------------------------------------------------------"
 puts  " Creating initial Git commit ...".cyan
 puts  "---------------------------------------------------------"
 git   :add => "."
-git   :commit => "-a -m 'Initial commit.'"
+git   :commit => "-am 'Initial commit.'"
 
 # DONE!
-puts  "---------------------------------------------------------"
-puts  " PROCESS COMPLETE!".yellow.bold
-puts  "--------------------------------------------------------- \n\n\n"
+puts  "\n========================================================="
+puts  " INSTALLATION COMPLETE!".yellow.bold
+puts  "=========================================================\n\n\n"
