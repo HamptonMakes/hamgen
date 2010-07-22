@@ -19,10 +19,5 @@
 - %meta{:name => 'apple-mobile-web-app-capable', :content => 'yes'}
 
 #### Fixed viewport to 320x480 (on iPhone) and disables zooming
-- %meta{:name => 'viewport', :content => 'width=device-width; initial-scale=1.0; user-scalable=0'}
-
-#### Other
-- %link{:rel => 'apple-touch-icon', :href => '/'}
-- %meta{:name => 'viewport', :content => 'width=device-width; initial-scale=1.0; user-scalable=0'}
-- %meta{:name => 'apple-mobile-web-app-capable', :content => 'yes'}
+- %meta{:name => 'viewport', :content => 'width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0'}
 
