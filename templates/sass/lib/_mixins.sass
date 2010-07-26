@@ -1,3 +1,8 @@
+// Quickly outline a tag for debug purposes
+=o
+  :background                             rgba(255, 0, 0, 0.15)             !important
+  :outline                                1px solid red                     !important
+
 =transition(                              $transition)
   :transition                             $transition
   :-moz-transition                        $transition
@@ -7,10 +12,6 @@
   :transform                              $transform
   :-moz-transform                         $transform
   :-webkit-transform                      $transform
-
-// Use the CC3 Pie -- http://css3pie.com/about/
-=pie
-  :behavior                               url('/stylesheets/PIE.htc')
 
 // If you want to have multiple box shadows, you must enclose the values in quotes (" ").
 =box-shadow(                              $shadow)

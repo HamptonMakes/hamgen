@@ -1,35 +1,39 @@
 # Shawn's Rails 3 Template
 ***
 
-You need the following RubyGems at these *minimum* versions:
-
-  * `rails` **3.0.0.beta3**
-  * `haml` **3.0.12**
-  * `bundler` **0.9.26**
-  * `colored` **1.2**
-    
-_Ruby 1.9.x is probably the way to go, as well._  
+## Requirements
+<table>
+  <tr>
+    <th>ruby</th>
+    <td>&ge; 1.9.<em>x</em></td>
+  </tr>
+  <tr>
+    <th>rails</th>
+    <td>&ge; 3.0.0.beta3</td>
+  </tr>
+  <tr>
+    <th>haml</th>
+    <td>&ge; 3.0.12</td>
+  </tr>
+  <tr>
+    <th>bundler</th>
+    <td>&ge; 0.9.36</td>
+  </tr>
+  <tr>
+    <th>colored</th>
+    <td>&ge; 1.2</td>
+  </tr>      
+</table>
 
 ## Getting Started
-
-  1. To begin, make sure the `shawns-rails3-template` directory is in the parent directory where you're creating your new project.
-
-  2. Run `rails {app} -m ./shawns-rails3-template/init.rb` &mdash; where _{app}_ is the name you wish to give your project.
-    
-     > Rails will then setup as normal, with the final step loading the `init.rb` which applies the template files to the new project.
-  
-  If you run this on a previously existing Rails app, you'll be prompted if you want to overwrite various files. In each instance, type `n` for No.
+Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file 
+located in this project.
 
 ## Internet Explorer Support
 
-The defaults in this project _do not_ support anything below **IE7**. Instead, using conditional
-comments, all javascript is removed and IE 6 and below are served with the [Universal IE6 CSS](http://code.google.com/p/universal-ie6-css/)
+The defaults in this project _do not_ support anything below **IE8**. Instead, using conditional
+comments, all javascript is removed and IE 7 and below are served with the [Universal IE CSS](http://code.google.com/p/universal-ie6-css/)
 stylesheet. The content is readable and accessible in these browsers, but presented with a simpler style.
-
-If you wish to do any further over rides to this base CSS, you can do so in the `ie6.sass` file located in the root of the `/sass` directory.
-
-IE 7 and 8 also gain the addition of the [ie7-js library](http://code.google.com/p/ie7-js/), which helps implement some of the more advanced CSS selectors.
-See that site for more information and examples.
 
 There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
 
@@ -37,18 +41,16 @@ There is also meta information setup in `application.html.haml` to set IE8 to `e
 
 ### Directory Structure
   * **/sass**
-    * \_\*setup.sass **_(START HERE!)_**
+    * \_setup.sass **_(START HERE!)_**
     * \_variables.sass
     * \_application.sass (Where all @imports are linked.)
-    * ie6.sass (If you want to add over rides to the IE CSS reset.)
     * **/lib** (Default libraries.)
-        * \_debug.sass
         * \_mixins.sass
         * \_reset.sass
         * **/media** (CSS Media Types.)
             * \_mobile.sass
             * \_print.sass
-    * **/style** (Place your project-specific Sass in this directory.)
+    * **/styles** (Place your project-specific Sass in this directory.)
        * \_common.sass (Reusable classes, tag redefinitions, etc.)
        * \_template.sass (Building blocks of the layout; header, footer, nav, etc.)
 
@@ -213,12 +215,13 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
   </tr>
 </table>
 <br>
+
 #### Sass Syntax
 
 I have been using and writing Sass since its original inception. Thus you'll notice I use the original Sass syntax and not the newer SCSS implementation.
 
-I am not a fan of the SCSS style and will never be converting this project to it. If you'd prefer the SCSS style of writing your Sass, I suggest you
-fork this project and run: `$ sass-convert --recursive --from sass2 --to scss src/stylesheets/`
+I am not a fan of the SCSS style and will never be converting this project to it. If you'd prefer the SCSS style of writing your Sass, it should be easy enough to
+fork this project and convert the formatting styles. Check the [SASS Documentation](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html) for more.
 
 I also prefer prefixing the `:` to the _start_ of the attribute selector as opposed to the more CSS/SCSS syntax of the colon being the suffix.
 This is just me being set in my ways and, in all honesty, doesn't effect the end-user functionality of the project if you choose to do otherwise.

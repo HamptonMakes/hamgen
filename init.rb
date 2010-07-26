@@ -8,7 +8,7 @@ require "bundler"
 
 # START THIS THING
 puts  "\n========================================================="
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.4.0] ".yellow.bold
+puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.4.1] ".yellow.bold
 puts  "=========================================================\n\n"
 
 # REMOVE FILES
@@ -54,7 +54,6 @@ puts  "---------------------------------------------------------"
 run   "cp -r #{@path}sass app/"
 run   "cp #{@path}plugins.rb config/initializers/"
 run   "cat #{@path}environment.rb >> config/environment.rb"
-run   "cp #{@path}PIE.htc public/stylesheets/"
 puts  "---------------------------------------------------------"
 
 # GEMFILE
