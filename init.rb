@@ -1,10 +1,12 @@
-@path = "../shawns-rails3-template/templates/"
+
 
 # REQUIRED GEMS
 require "colored"
 require "rails"
 require "haml"
 require "bundler"
+
+@path = "#{File.dirname(__FILE__)}/templates/"
 
 # START THIS THING
 puts  "\n========================================================="
