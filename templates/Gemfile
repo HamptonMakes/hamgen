@@ -1,8 +1,8 @@
 source 'http://gemcutter.org'
 
-gem "rails",          "3.0.0.beta3"
-gem "haml",           "3.0.12"
-gem "paperclip",      "2.3.2", :git => 'git://github.com/deanmao/paperclip.git', :branch => 'rails3'
+gem "rails",          "3.0.0.rc"
+gem "haml"
+gem 'carrierwave',    :git => 'git://github.com/jnicklas/carrierwave.git'
 gem "bluecloth"       ">= 2.0.7"
 gem "sqlite3-ruby",   :require => "sqlite3"
 gem "will_paginate",  "3.0.pre"
