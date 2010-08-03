@@ -43,7 +43,7 @@ There is also meta information setup in `application.html.haml` to set IE8 to `e
   * **/sass**
     * \_setup.sass **_(START HERE!)_**
     * \_variables.sass
-    * \_application.sass (Where all @imports are linked.)
+    * application.sass (Where all @imports are linked.)
     * **/lib** (Default libraries.)
         * \_mixins.sass
         * \_reset.sass
