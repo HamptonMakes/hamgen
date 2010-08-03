@@ -5,8 +5,9 @@
                   Class goes on parent holding floating children.
 
 
-.clear, .clearfix:after
+.clear
   :clear                      both
 .clearfix:after
+  @extend                    .clear
   :content                    ""
   :display                    block

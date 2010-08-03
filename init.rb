@@ -1,5 +1,3 @@
-
-
 # REQUIRED GEMS
 require "colored"
 require "rails"
