@@ -43,7 +43,7 @@ There is also meta information setup in `application.html.haml` to set IE8 to `e
   * **/sass**
     * \_setup.sass **_(START HERE!)_**
     * \_variables.sass
-    * \_application.sass (Where all @imports are linked.)
+    * application.sass (Where all @imports are linked.)
     * **/lib** (Default libraries.)
         * \_mixins.sass
         * \_reset.sass
@@ -94,31 +94,6 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
   </tr>
 </table>
 
-#### Debug Mixins
-
-<table>
-  <tr>
-    <th align="left">name</th>
-    <th align="left">function</th>
-  </tr>
-  <tr>
-    <td>+g</td>
-    <td><em>Grid</em> &mdash; Set element background to 10px by 10px grid.</td>
-  </tr>
-  <tr>
-    <td>+c</td>
-    <td><em>Columns</em> &mdash; Set element background to typographic columns (16 rows.)</td>
-  </tr>
-  <tr>
-    <td>+o</td>
-    <td><em>Quick Outline</em> &mdash; Quickly outline a tag.</td>
-  </tr>
-  <tr>
-    <td>+n</td>
-    <td><em>Nested Outlines</em> &mdash; Do a cascading series of outlines around elements by hierarchy.</td>
-  </tr>
-</table>
-
 #### Custom Mixins
 <table>
   <tr>
@@ -133,6 +108,11 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <td>+r</td>
     <td><em>Link Reset</em> &mdash; Resets borders and padding. Works in conjunction with +h if you're replacing text inside a link.</td>
   </tr>
+  <tr>
+    <td>+o</td>
+    <td><em>Quick Outline</em> &mdash; For Debuggin: Quickly outline a tag.</td>
+  </tr>
+
 </table>
 
 #### Font Stack Variables
