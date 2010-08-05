@@ -1,9 +1,7 @@
-// ----------------------
-   Hard Tag Reset
-   ----------------------
-a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, footer,
-h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, legend, li, menu,
-nav, ol, p, q, section, select, small, table, textarea, td, th, tr, ul
+// Hard Tag Reset
+a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, legend, li, menu, nav, 
+ol, p, section, select, small, table, textarea, td, th, tr, ul
   :font
     :size                     100%
     :style                    normal
@@ -13,24 +11,18 @@ nav, ol, p, q, section, select, small, table, textarea, td, th, tr, ul
   :padding                    0
   :vertical-align             baseline
 
-// ----------------------
-   Setting Blocks
-   ----------------------
-article, aside, footer, header, hgroup, img, label, menu, nav, section
+// Setting Blocks
+article, aside, figure, footer, header, hgroup, img, label, menu, nav, section
   :display                    block
 
-// ----------------------
-   Typography
-   ----------------------
+// Typography
 h1, h2, h3, h4, h5, h6, p, table, li, fieldset
   :margin-bottom              $font-size
 
 p
   :line-height                $font-size * 1.55
 
-// ----------------------
-   <body> Reset
-   ----------------------
+// <body> Reset
 body, textarea, input, select, button
   :font-family                $font-family
 
@@ -43,9 +35,7 @@ body
 body, legend
   :color                      $color
 
-// ----------------------
-   Links
-   ----------------------
+// Links
 a, abbr[title]
   :padding-bottom             1px
 
@@ -65,9 +55,7 @@ a
   img
     :border                   0
 
-// --------------------
-   Tables + Forms
-   --------------------
+// Tables + Forms
 table
   :border
     :collapse                 collapse
@@ -105,25 +93,47 @@ textarea
   :overflow                   auto
   :resize                     none
 
-
-// ----------------------
-   Misc
-   ----------------------
+// Misc
 abbr[title]
   :border-bottom              1px dotted
   :cursor                     help
 
-q
-  :quotes                     none
-  &:before, &:after
-    :content                  ""
-
 ul, ol
   :list-style                 none
   
-// ----------------------
-   Be nice to IE...
-   ----------------------  
+// Be nice to IE...
 a, div, li, li a
   :zoom                       1
   
+// iPhones, iPod Touches and iPads...
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
+  *
+    :-webkit
+      :box-shadow             none  !important
+      :tap-highlight-color    rgba(0,0,0,0)
+      :touch-callout          none
+      :text-size-adjust       none
+      :user-select            none
+    :text-shadow              none  !important
+
+  body
+    :-webkit-text-stroke      0 black  
+    
+// Printing
+@media print
+  body
+    :color                    black !important
+    :background               white !important
+    :font-size                12pt  !important
+  
+  a:after, abbr[title]:after
+    :font-size                75%
+  
+  a:after
+    :content                  " (" attr(href) ") "
+  
+  abbr[title]
+    :border                   0
+    &:after
+      :content                " (" attr(title) ") "    
+    

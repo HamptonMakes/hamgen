@@ -193,6 +193,14 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <td>$xx-large</td>
     <td>55px</td>
   </tr>
+  <tr>
+    <td>$huge</td>
+    <td>72px</td>
+  </tr>
+  <tr>
+    <td>$x-huge</td>
+    <td>89px</td>
+  </tr>
 </table>
 <br>
 
