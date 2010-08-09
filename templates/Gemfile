@@ -4,7 +4,7 @@ gem "rails",          "3.0.0.rc"
 gem "haml",           ">=3.0.15"
 gem "bluecloth",      ">= 2.0.7"
 gem "sqlite3-ruby",   :require => "sqlite3"
-gem "will_paginate",  "3.0.pre"
+gem "will_paginate",  "3.0.pre2"
 
 # Choose which one you prefer!
 gem "paperclip",      "=>2.3.2", :git => 'git://github.com/deanmao/paperclip.git', :branch => 'rails3'
