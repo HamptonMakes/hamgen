@@ -104,13 +104,15 @@ ul, ol
 // Be nice to IE...
 a, div, li, li a
   :zoom                       1
-  
+
+img
+  :-ms-interpolation-mode     bicubic  
+
 // iPhones, iPod Touches and iPads...
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
   *
     :-webkit
       :box-shadow             none  !important
-      :tap-highlight-color    rgba(0,0,0,0)
       :touch-callout          none
       :text-size-adjust       none
       :user-select            none
@@ -118,6 +120,9 @@ a, div, li, li a
 
   body
     :-webkit-text-stroke      0 black  
+  
+  a 
+    :-webkit-tap-highlight-color    rgba(0,0,0,0) 
     
 // Printing
 @media print
