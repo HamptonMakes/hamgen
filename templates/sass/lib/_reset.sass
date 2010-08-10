@@ -23,6 +23,9 @@ p
   :line-height                $font-size * 1.55
 
 // <body> Reset
+html
+  :-webkit-font-smoothing     antialiased
+
 body, textarea, input, select, button
   :font-family                $font-family
 
@@ -108,19 +111,20 @@ a, div, li, li a
 img
   :-ms-interpolation-mode     bicubic  
 
-// iPhones, iPod Touches and iPads...
+// Modern Mobile Devices
 @media only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
   *
-    :-webkit
-      :box-shadow             none  !important
-      :touch-callout          none
-      :text-size-adjust       none
-      :user-select            none
+    :-webkit-box-shadow       none  !important
     :text-shadow              none  !important
 
-  body
-    :-webkit-text-stroke      0 black  
-  
+  html
+    :-ms-text-size-adjust     none
+    :-webkit
+      :text-size-adjust       none
+      :text-stroke            0 black  
+      :touch-callout          none
+      :user-select            none
+
   a 
     :-webkit-tap-highlight-color    rgba(0,0,0,0) 
     
