@@ -1,13 +1,33 @@
 // Clearing Floats
    ----------------------------------------------
    .clear     =>  For non-floating element immediately below a floating element.
+
    .clearfix  =>  For floating children inside a parent.
                   Class goes on parent holding floating children.
 
-
+// Use all of these classes with the @extend option
 .clear
   :clear                      both
+
+.left
+  :float                      left
+
+.right
+  :float                      right
+
+.block
+  :display                    block
+
+.absolute
+  :position                   absolute
+
+.relative
+  :position                   relative
+
+.center
+  :text-align                 center
+
 .clearfix:after
   @extend                    .clear
+  @extend                    .block
   :content                    ""
-  :display                    block
