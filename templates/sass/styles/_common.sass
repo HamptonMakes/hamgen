@@ -6,9 +6,6 @@
                   Class goes on parent holding floating children.
 
 // Use all of these classes with the @extend option
-.clear
-  :clear                      both
-
 .left
   :float                      left
 
@@ -27,7 +24,23 @@
 .center
   :text-align                 center
 
+.clear
+  :clear                      both
+
 .clearfix:after
   @extend                    .clear
   @extend                    .block
   :content                    ""
+
+.hide
+  @extend                    .block
+  :font-size                  0
+  :overflow                   hidden
+  :text-indent               -9999em
+  :.text-transform            capitalize
+  :white-space                nowrap
+
+// Reset default link styling
+.reset
+  :border                     0
+  :padding                    0

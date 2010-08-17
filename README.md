@@ -94,27 +94,6 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
   </tr>
 </table>
 
-#### Custom Mixins
-<table>
-  <tr>
-    <th align="left">name</th>
-    <th align="left">function</th>
-  </tr>
-  <tr>
-    <td>+h</td>
-    <td><em>Hide Text</em> &mdash; If you wish to replace the text inside a tag with an image using CSS, this mixin will write the Sass needed to properly hide the content.</td>
-  </tr>
-  <tr>
-    <td>+r</td>
-    <td><em>Link Reset</em> &mdash; Resets borders and padding. Works in conjunction with +h if you're replacing text inside a link.</td>
-  </tr>
-  <tr>
-    <td>+o</td>
-    <td><em>Quick Outline</em> &mdash; For Debuggin: Quickly outline a tag.</td>
-  </tr>
-
-</table>
-
 #### Font Stack Variables
 <table>
   <tr>
@@ -202,6 +181,12 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <td>89px</td>
   </tr>
 </table>
+
+#### `@extend` Classes
+There are a number of classes contained in `styles/common.sass` that can be used in conjunction with the Sass `@extend` function. Please
+see that file for more information.
+
+
 <br>
 
 #### Sass Syntax

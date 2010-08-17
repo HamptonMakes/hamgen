@@ -1,3 +1,13 @@
+// Quickly outline a tag for debug purposes
+=o
+  :background                             rgba(255, 0, 0, 0.15)   !important
+  :outline                                1px solid red           !important
+
+=opacity(                                 $opacity)
+  :-ms-filter                             unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=") + $opacity + unquote(")")
+  :filter                                 unquote("alpha(opacity=") + $opacity + unquote(")")
+  :opacity                                $opacity * 0.01
+
 =transition(                              $transition)
   :transition                             $transition
   :-moz-transition                        $transition
@@ -35,28 +45,3 @@
   :border-bottom-left-radius              $radius
   :-moz-border-radius-bottomleft          $radius
   :-webkit-border-bottom-left-radius      $radius
-
-=opacity(                                 $opacity)
-  :-ms-filter                             unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=") + $opacity + unquote(")")
-  :filter                                 unquote("alpha(opacity=") + $opacity + unquote(")")
-  :opacity                                $opacity * 0.01
-
-// Hide text
-=h(                                       $indent: -9999em)
-  :display                                block
-  :font-size                              0
-  :overflow                               hidden
-  :text
-    :indent                               $indent
-    :transform                            capitalize
-  :white-space                            nowrap
-
-// Reset default link styling
-=r
-  :border                                 0
-  :padding                                0
-
-// Quickly outline a tag for debug purposes
-=o
-  :background                             rgba(255, 0, 0, 0.15)   !important
-  :outline                                1px solid red           !important
