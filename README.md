@@ -5,19 +5,19 @@
 <table>
   <tr>
     <th>ruby</th>
-    <td>&ge; 1.9.<em>x</em></td>
+    <td>&ge; 1.9.2</td>
   </tr>
   <tr>
     <th>rails</th>
-    <td>&ge; 3.0.0.beta3</td>
+    <td>&ge; 3.0.0</td>
   </tr>
   <tr>
     <th>haml</th>
-    <td>&ge; 3.0.12</td>
+    <td>&ge; 3.0.18</td>
   </tr>
   <tr>
     <th>bundler</th>
-    <td>&ge; 0.9.36</td>
+    <td>&ge; 0.9.26</td>
   </tr>
   <tr>
     <th>colored</th>
@@ -42,14 +42,13 @@ There is also meta information setup in `application.html.haml` to set IE8 to `e
 ### Directory Structure
   * **/sass**
     * \_setup.sass **_(START HERE!)_**
-    * \_variables.sass
+    
     * application.sass (Where all @imports are linked.)
     * **/lib** (Default libraries.)
+        * \_extend.sass
         * \_mixins.sass
         * \_reset.sass
-        * **/media** (CSS Media Types.)
-            * \_mobile.sass
-            * \_print.sass
+        * \_variables.sass
     * **/styles** (Place your project-specific Sass in this directory.)
        * \_common.sass (Reusable classes, tag redefinitions, etc.)
        * \_template.sass (Building blocks of the layout; header, footer, nav, etc.)
@@ -183,8 +182,8 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
 </table>
 
 #### `@extend` Classes
-There are a number of classes contained in `styles/common.sass` that can be used in conjunction with the Sass `@extend` function. Please
-see that file for more information.
+There are a number of classes contained in `lib/_extend.sass` that can be used in conjunction with the Sass `@extend` function. Please
+see that file for what's included.
 
 
 <br>

@@ -13,7 +13,7 @@ ol, p, section, select, small, table, textarea, td, th, tr, ul
 
 // Setting Blocks
 article, aside, figure, footer, header, hgroup, img, label, menu, nav, section
-  :display                    block
+  @extend                    .block
 
 // Typography
 h1, h2, h3, h4, h5, h6, p, table, li, fieldset
@@ -33,7 +33,7 @@ body
   :-webkit-text-stroke        1px transparent
 
 body, legend
-  :color                      $color
+  :color                      $colour
 
 // Links
 a, abbr[title]
@@ -48,8 +48,6 @@ a
     :color                    $hover_colour
   &:hover, &:focus
     :border-bottom            0
-  &:focus
-    :background               $focus_background
   &:active
     :color                    $active_colour
   img
@@ -105,7 +103,7 @@ ul, ol
   
 // Be nice to IE...
 a, div, li, li a
-  :zoom                       1
+  @extend                    .zoom
 
 img
   :-ms-interpolation-mode     bicubic  
@@ -140,10 +138,10 @@ img
     :font-size                75%
   
   a:after
-    :content                  " (" attr(href) ") "
+    :content                 " (" attr(href) ") "
   
   abbr[title]
     :border                   0
     &:after
-      :content                " (" attr(title) ") "    
+      :content               " (" attr(title) ") "    
     
