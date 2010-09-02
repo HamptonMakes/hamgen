@@ -35,29 +35,31 @@ The defaults in this project _do not_ support anything below **IE8**. Instead, u
 comments, all javascript is removed and IE 7 and below are served with the [Universal IE CSS](http://code.google.com/p/universal-ie6-css/)
 stylesheet. The content is readable and accessible in these browsers, but presented with a simpler style.
 
-There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
+There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, 
+if it exists.
 
 ## Sass
 
 ### Directory Structure
   * **/sass**
     * \_setup.sass **_(START HERE!)_**
-    
     * application.sass (Where all @imports are linked.)
-    * **/lib** (Default libraries.)
+    * **/lib** (Default libraries. Basically, don't touch these!)
         * \_extend.sass
         * \_mixins.sass
         * \_reset.sass
         * \_variables.sass
-    * **/styles** (Place your project-specific Sass in this directory.)
-       * \_common.sass (Reusable classes, tag redefinitions, etc.)
-       * \_template.sass (Building blocks of the layout; header, footer, nav, etc.)
-
+    * **/styles** (Place your project-specific Sass in these files.)
+       * \_common.sass 
+       * \_extend.sass 
+       * \_mixins.sass 
+       * \_template.sass 
+       * \_variables.sass
 
 
 ### Default Variables and Mixins in Sass
 
-To make life a bit easier, the following **variables `$`** and **mixins `+`** have been included in the project.
+The following **variables `$`** and **mixins `+`** have been included in the project's Sass `lib` directory.
 
 #### Cross-browser Mixins
 
