@@ -1,25 +1,47 @@
 // mixins.sass | LIBRARY MIX-INS
 
-// Quickly outline a tag for debug purposes
+// Quickly outline any tag for debug purposes
 =o
   :background                             rgba(255, 0, 0, 0.15)   !important
   :outline                                1px solid red           !important
 
+// Cross browser opacity
 =opacity(                                 $opacity)
   :-ms-filter                             unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=") + $opacity + unquote(")")
   :filter                                 unquote("alpha(opacity=") + $opacity + unquote(")")
   :opacity                                $opacity * 0.01
 
+// Cross browser transition effect
 =transition(                              $transition)
   :-moz-transition                        $transition
+  :-o-transition                          $transition
   :-webkit-transition                     $transition
   :transition                             $transition
 
+// Cross browser transform effect
 =transform(                               $transform)
   :-moz-transform                         $transform
+  :-o-transform                           $transform
   :-webkit-transform                      $transform
   :transform                              $transform
 
+// Cross browser multi-column layout
+// # of columns
+=column-count(                            $count)
+  :-moz-column-count                      $count
+  :-webkit-column-count                   $count
+  :column-count                           $count
+// Space between columns
+=column-gap(                              $gap)
+  :-moz-column-gap                        $gap
+  :-webkit-column-gap                     $gap
+  :column-gap                             $gap
+// Combine -count and -gap into one easy mixin  
+=columns(                                 $count, $gap)
+  +column-count(                          $count)  
+  +column-gap(                            $gap)
+
+// Cross browser box shadow
 // If you want to have multiple box shadows, you must enclose the values in quotes (" ").
 =box-shadow(                              $shadow)
   $shadow:                                unquote($shadow)
@@ -27,6 +49,7 @@
   :-webkit-box-shadow                     $shadow
   :box-shadow                             $shadow
 
+// Cross browser rounded corners
 =border-radius(                           $radius)
   :-moz-border-radius                     $radius
   :-webkit-border-radius                  $radius
