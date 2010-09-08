@@ -1,8 +1,8 @@
 source 'http://gemcutter.org'
 
 gem "rails",          "3.0.0"
-gem "haml",           ">=3.0.18"
-gem "bluecloth",      ">= 2.0.7"
+gem "haml"
+gem "bluecloth"
 gem "sqlite3-ruby",   :require => "sqlite3"
 gem "will_paginate",  "3.0.pre2"
 gem "paperclip",      ">=2.3.2", :git => 'git://github.com/deanmao/paperclip.git', :branch => 'rails3'

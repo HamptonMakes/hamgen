@@ -14,7 +14,7 @@
     /[if IE]
       %script{:src => 'http://html5shiv.googlecode.com/svn/trunk/html5.js'}
 
-  %body{:class => "#{params[:controller]}_#{params[:action]}"}
+  %body{:class => "#{params[:controller]} #{params[:controller]}_#{params[:action]}"}
 
     = yield
 
