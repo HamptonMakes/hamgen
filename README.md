@@ -22,11 +22,11 @@
   <tr>
     <th>colored</th>
     <td>&ge; 1.2</td>
-  </tr>      
+  </tr>
 </table>
 
 ## Getting Started
-Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file 
+Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file
 located in this project.
 
 ## Internet Explorer Support
@@ -35,7 +35,7 @@ The defaults in this project _do not_ support anything below **IE8**. Instead, u
 comments, all javascript is removed and IE 7 and below are served with the [Universal IE CSS](http://code.google.com/p/universal-ie6-css/)
 stylesheet. The content is readable and accessible in these browsers, but presented with a simpler style.
 
-There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, 
+There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_,
 if it exists.
 
 ## Sass
@@ -50,10 +50,10 @@ if it exists.
         * \_reset.sass
         * \_variables.sass
     * **/styles** (Place your project-specific Sass in these files.)
-       * \_common.sass 
-       * \_extend.sass 
-       * \_mixins.sass 
-       * \_template.sass 
+       * \_common.sass
+       * \_extend.sass
+       * \_mixins.sass
+       * \_template.sass
        * \_variables.sass
 
 
@@ -68,30 +68,50 @@ The following **variables `$`** and **mixins `+`** have been included in the pro
     <th align="left">name</th>
     <th align="left">function</th>
   </tr>
+
   <tr>
-    <td>+transition(<code>string</code>)</td>
-    <td>Create a CSS3 transition.</td>
+    <td>+border-radius(<code>string</code>)</td>
+    <td>
+      Creates rounded corners that work in modern browsers.
+      If you wish to target less than four corners, append the position to the mixin like so:
+      <br>
+      <code>+border-radius-top-left(10px)</code>
+    </td>
   </tr>
-  <tr>
-    <td>+tranform(<code>string</code>)</td>
-    <td>Create a CSS3 transformation.</td>
-  </tr>
+
   <tr>
     <td>+box-shadow(<code>string</code>)</td>
     <td>Creates a drop shadow that works in modern browsers.</td>
   </tr>
+
   <tr>
-    <td>+border-radius(<code>string</code>)</td>
-    <td>
-        Creates rounded corners that work in modern browsers.
-        If you wish to target less than four corners, append the position to the mixin like so:
-        <br>
-        <code>+border-radius-top-left(10px)</code>
-    </td>
+    <td>+column-count(<code>string</code>)</td>
+    <td>Sets the number of CSS3-style columns.</td>
+  </tr>
+
+  <tr>
+    <td>+column-gap(<code>string</code>)</td>
+    <td>Sets the size of the gaps between CSS3-style columns.</td>
+  </tr>
+
+  <tr>
+    <td>+columns(<code>count string</code>, <code>gap string</code>)</td>
+    <td>Sets both column -count and -gap in one mixin.</td>
+  </tr>
+
   <tr>
     <td>+opacity(<code>integer</code>)</td>
     <td>Sets the opacity of an entire element.</td>
   </tr>
+
+  <tr>
+    <td>+tranform(<code>string</code>)</td>
+    <td>Create a CSS3 transformation.</td>
+  </tr>
+
+  <tr>
+    <td>+transition(<code>string</code>)</td>
+    <td>Create a CSS3 transition.</td>
   </tr>
 </table>
 
