@@ -5,6 +5,12 @@
   :background                             rgba(255, 0, 0, 0.15)   !important
   :outline                                1px solid red           !important
 
+// Cross browser box model resizing
+=box-sizing(                              $box-sizing)
+  :-moz-box-sizing                        $box-sizing
+  :-webkit-box-sizing                     $box-sizing
+  :box-sizing                             $box-sizing
+
 // Cross browser opacity
 =opacity(                                 $opacity)
   :-ms-filter                             unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=") + $opacity + unquote(")")
