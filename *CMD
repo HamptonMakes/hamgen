@@ -1,2 +1,2 @@
-rails {app} -m ./shawns-rails3-template/init.rb
+rails new {app} -m ./shawns-rails3-template/init.rb
 
