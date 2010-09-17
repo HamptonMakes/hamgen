@@ -39,14 +39,14 @@
   :clear                      both
 
 .clearfix:after
-  @extend                    .clear
-  @extend                    .block
+  @extend                     .clear
+  @extend                     .block
   :content                    ""
 
 // Replacing text with a background image
 .hide-text, .h
-  @extend                    .block
-  @extend                    .hidden
+  @extend                     .block
+  @extend                     .hidden
   :font-size                  0
   :text-indent               -9999em
   :.text-transform            capitalize
@@ -57,3 +57,31 @@
   :border                     0
   :margin                     0
   :padding                    0
+
+// Consolidate fonts. Works with font $variables in lib/variables.
+.font_x-small
+  :font-size                  $x-small
+
+.font_small
+  :font-size                  $small
+
+.font_medium
+  :font-size                  $medium
+
+.font_x-medium
+  :font-size                  $x-medium
+
+.font_large
+  :font-size                  $large
+
+.font_x-large
+  :font-size                  $x-large
+
+.font_xx-large
+  :font-size                  $xx-large
+
+.font_huge
+  :font-size                  $huge
+
+.font_x-huge
+  :font-size                  $x-huge

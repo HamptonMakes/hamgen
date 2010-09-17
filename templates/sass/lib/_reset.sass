@@ -2,8 +2,8 @@
 
 // Hard Tag Reset
 a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, figure, footer, 
-h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, legend, li, menu, nav, 
-ol, p, section, select, small, table, textarea, td, th, tr, ul
+h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, label, legend, li, menu, 
+nav, ol, p, section, select, small, table, textarea, td, th, tr, ul
   :font
     :size                     100%
     :style                    normal
@@ -15,7 +15,7 @@ ol, p, section, select, small, table, textarea, td, th, tr, ul
 
 // Setting Blocks
 article, aside, figure, footer, header, hgroup, img, label, menu, nav, section
-  @extend                    .block
+  @extend                     .block
 
 // Typography
 h1, h2, h3, h4, h5, h6, p, table, li, fieldset
@@ -106,7 +106,7 @@ ul, ol
   
 // Be nice to IE...
 a, div, li, li a
-  @extend                    .zoom
+  @extend                     .zoom
 
 img
   :-ms-interpolation-mode     bicubic  
