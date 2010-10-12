@@ -1,4 +1,14 @@
 # Hampton's Shawn's Rails 3 Generator
+
+This is a fork of Shawn's Rails 3 Templates. Shawn is the greatest front-end coder I've ever known.
+Flat out. And, this combines his default setup and some of my own personal preferences. This is basically
+a simple Rails project generator that gives you a good simple place to start.
+
+The philosophy is not to install everything ever. I'm trying to keep the original stack thin.
+
+Also, the other philosophy is that I built this for me. Not for you. You are welcome to use it,
+but no bitching about what you prefer. Feel free to fork this to your black little heart's content.
+
 ***
 
 ## Requirements
@@ -24,14 +34,6 @@
     <td>&ge; 1.2</td>
   </tr>
 </table>
-
-## Introduction
-
-This is a fork of Shawn's Rails 3 Templates. Shawn is the greatest front-end coder I've ever known.
-Flat out. And, this combines his default setup and some of my own personal preferences. This is basically
-a simple Rails project generator that gives you a good simple place to start.
-
-The philosophy is not to install everything ever. I'm trying to keep the original stack thin.
 
 ## Getting Started
 
