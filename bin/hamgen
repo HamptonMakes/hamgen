@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+# The command rails generator tool
+
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../'
+
+require 'optparse'
+require 'pp'
+
+options = {}
+
+optparse = OptionParser.new do|opts|
+  # TODO: Put command-line options here
+  options[:run_checks] = true
+  
+  opts.banner = %"Usage: hamgen [options] name
+
+  Description:
+    Generate a Rails project just the way ole' Hamptino like them"
+  
+  # This displays the help screen, all programs are
+  # assumed to have this option.
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+
+  opts.on( '-f', '--force', 'Run without version checks') do
+    options[:run_checks] = false
+  end
+  
+  opts.on( '-e', '--erb', 'Generate ERB') do
+    puts "hahahahhaa... no. get your own generator!"
+    exit
+  end
+end
+
+# Parse the command-line. Remember there are two forms
+# of the parse method. The 'parse' method simply parses
+# ARGV, while the 'parse!' method parses ARGV and removes
+# any options found there, as well as any parameters for
+# the options. What's left is the list of files to resize.
+optparse.parse!
+
+if options[:run_checks]
+  unless `rails --version`.include?("Rails 3")
+    puts "Must have Rails 3 installed"
+    exit
+  end
+
+  unless `ruby --version`.include?("ruby 1.9")
+    puts "Must have Ruby 1.9.2"
+    exit
+  end
+end
+
+if ARGV[0].nil?
+  puts "You must give the project a name!"
+  exit
+end
+
+puts `rails new #{ARGV[0]} -m #{File.dirname(__FILE__) + '/../init.rb'}`

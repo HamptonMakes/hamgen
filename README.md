@@ -1,4 +1,4 @@
-# Shawn's Rails 3 Template
+# Hampton's Shawn's Rails 3 Generator
 ***
 
 ## Requirements
@@ -26,8 +26,10 @@
 </table>
 
 ## Getting Started
-Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file
-located in this project.
+
+Install the gem with "gem install hamgen" then run "hamgen #{app_name}" which app_name is your app name... duh!
+
+Then it builds something *I* like.
 
 ## Internet Explorer Support
 
