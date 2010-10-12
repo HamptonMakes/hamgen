@@ -10,7 +10,7 @@ require "bundler"
 
 # START THIS THING
 puts  "\n========================================================="
-puts  " SHAWN'S RAILS 3 TEMPLATE - [v1.5.14] ".yellow.bold
+puts  " HAMPTON'S SHAWN'S RAILS 3 TEMPLATE - [#{File.read(@path + '../VERSION').strip}] ".yellow.bold
 puts  "=========================================================\n\n"
 
 # REMOVE FILES
@@ -30,7 +30,9 @@ puts  "---------------------------------------------------------"
 puts  " Adding useful junk ... ".green
 puts  "---------------------------------------------------------"
 run   "cp #{@path}application.html.haml app/views/layouts"
-run   "cp -r #{@path}images public/"
+run   "mkdir public/images"
+run   "mkdir public/images/backgrounds"
+run   "mkdir public/images/sprites"
 puts  "---------------------------------------------------------"
 
 # GIT INIT
@@ -56,6 +58,9 @@ puts  "---------------------------------------------------------"
 run   "cp -r #{@path}sass app/"
 run   "cp #{@path}plugins.rb config/initializers/"
 run   "cat #{@path}environment.rb >> config/environment.rb"
+Dir["app/sass/**/*.sass"].each do |file|
+  run "sass-convert -T sass -F sass -i #{file}"
+end
 puts  "---------------------------------------------------------"
 
 # GEMFILE
