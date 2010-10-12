@@ -25,6 +25,14 @@
   </tr>
 </table>
 
+## Introduction
+
+This is a fork of Shawn's Rails 3 Templates. Shawn is the greatest front-end coder I've ever known.
+Flat out. And, this combines his default setup and some of my own personal preferences. This is basically
+a simple Rails project generator that gives you a good simple place to start.
+
+The philosophy is not to install everything ever. I'm trying to keep the original stack thin.
+
 ## Getting Started
 
 Install the gem with "gem install hamgen" then run "hamgen #{app_name}" which app_name is your app name... duh!
@@ -219,9 +227,6 @@ I have been using and writing Sass since its original inception. Thus you'll not
 I am not a fan of the SCSS style and will never be converting this project to it. If you'd prefer the SCSS style of writing your Sass, it should be easy enough to
 fork this project and convert the formatting styles. Check the [SASS Documentation](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html) for more.
 
-I also prefer prefixing the `:` to the _start_ of the attribute selector as opposed to the more CSS/SCSS syntax of the colon being the suffix.
-This is just me being set in my ways and, in all honesty, doesn't effect the end-user functionality of the project if you choose to do otherwise.
-
 <br><br>
 If you have questions or concerns, feel free to give me a shout at:
-[shawn@yayinternets.com](mailto:shawn@yayinternets.com)
+[hcatlin@gmail.com](mailto:hcatlin@gmail.com)
