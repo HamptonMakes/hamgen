@@ -5,28 +5,28 @@
 <table>
   <tr>
     <th>ruby</th>
-    <td>&ge; 1.9.<em>x</em></td>
+    <td>&ge; 1.9.2</td>
   </tr>
   <tr>
     <th>rails</th>
-    <td>&ge; 3.0.0.beta3</td>
+    <td>&ge; 3.0.0</td>
   </tr>
   <tr>
     <th>haml</th>
-    <td>&ge; 3.0.12</td>
+    <td>&ge; 3.0.18</td>
   </tr>
   <tr>
     <th>bundler</th>
-    <td>&ge; 0.9.36</td>
+    <td>&ge; 0.9.26</td>
   </tr>
   <tr>
     <th>colored</th>
     <td>&ge; 1.2</td>
-  </tr>      
+  </tr>
 </table>
 
 ## Getting Started
-Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file 
+Invoke the creation a new Rails application in the command line as normal, but add the **-m** flag followed by the path that points to the `init.rb` file
 located in this project.
 
 ## Internet Explorer Support
@@ -35,30 +35,31 @@ The defaults in this project _do not_ support anything below **IE8**. Instead, u
 comments, all javascript is removed and IE 7 and below are served with the [Universal IE CSS](http://code.google.com/p/universal-ie6-css/)
 stylesheet. The content is readable and accessible in these browsers, but presented with a simpler style.
 
-There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_, if it exists.
+There is also meta information setup in `application.html.haml` to set IE8 to `edge` compatibility and also to check for _Google Chrome Frame_,
+if it exists.
 
 ## Sass
 
 ### Directory Structure
   * **/sass**
     * \_setup.sass **_(START HERE!)_**
-    * \_variables.sass
     * application.sass (Where all @imports are linked.)
-    * **/lib** (Default libraries.)
+    * **/lib** (Default libraries. Basically, don't touch these!)
+        * \_extend.sass
         * \_mixins.sass
         * \_reset.sass
-        * **/media** (CSS Media Types.)
-            * \_mobile.sass
-            * \_print.sass
-    * **/styles** (Place your project-specific Sass in this directory.)
-       * \_common.sass (Reusable classes, tag redefinitions, etc.)
-       * \_template.sass (Building blocks of the layout; header, footer, nav, etc.)
-
+        * \_variables.sass
+    * **/styles** (Place your project-specific Sass in these files.)
+       * \_common.sass
+       * \_extend.sass
+       * \_mixins.sass
+       * \_template.sass
+       * \_variables.sass
 
 
 ### Default Variables and Mixins in Sass
 
-To make life a bit easier, the following **variables `$`** and **mixins `+`** have been included in the project.
+The following **variables `$`** and **mixins `+`** have been included in the project's Sass `lib` directory.
 
 #### Cross-browser Mixins
 
@@ -67,52 +68,51 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <th align="left">name</th>
     <th align="left">function</th>
   </tr>
+
   <tr>
-    <td>+transition(<code>string</code>)</td>
-    <td>Create a CSS3 transition.</td>
+    <td>+border-radius(<code>string</code>)</td>
+    <td>
+      Creates rounded corners that work in modern browsers.
+      If you wish to target less than four corners, append the position to the mixin like so:
+      <br>
+      <code>+border-radius-top-left(10px)</code>
+    </td>
   </tr>
-  <tr>
-    <td>+tranform(<code>string</code>)</td>
-    <td>Create a CSS3 transformation.</td>
-  </tr>
+
   <tr>
     <td>+box-shadow(<code>string</code>)</td>
     <td>Creates a drop shadow that works in modern browsers.</td>
   </tr>
+
   <tr>
-    <td>+border-radius(<code>string</code>)</td>
-    <td>
-        Creates rounded corners that work in modern browsers.
-        If you wish to target less than four corners, append the position to the mixin like so:
-        <br>
-        <code>+border-radius-top-left(10px)</code>
-    </td>
+    <td>+column-count(<code>string</code>)</td>
+    <td>Sets the number of CSS3-style columns.</td>
+  </tr>
+
+  <tr>
+    <td>+column-gap(<code>string</code>)</td>
+    <td>Sets the size of the gaps between CSS3-style columns.</td>
+  </tr>
+
+  <tr>
+    <td>+columns(<code>count string</code>, <code>gap string</code>)</td>
+    <td>Sets both column -count and -gap in one mixin.</td>
+  </tr>
+
   <tr>
     <td>+opacity(<code>integer</code>)</td>
     <td>Sets the opacity of an entire element.</td>
   </tr>
-  </tr>
-</table>
 
-#### Custom Mixins
-<table>
   <tr>
-    <th align="left">name</th>
-    <th align="left">function</th>
-  </tr>
-  <tr>
-    <td>+h</td>
-    <td><em>Hide Text</em> &mdash; If you wish to replace the text inside a tag with an image using CSS, this mixin will write the Sass needed to properly hide the content.</td>
-  </tr>
-  <tr>
-    <td>+r</td>
-    <td><em>Link Reset</em> &mdash; Resets borders and padding. Works in conjunction with +h if you're replacing text inside a link.</td>
-  </tr>
-  <tr>
-    <td>+o</td>
-    <td><em>Quick Outline</em> &mdash; For Debuggin: Quickly outline a tag.</td>
+    <td>+tranform(<code>string</code>)</td>
+    <td>Create a CSS3 transformation.</td>
   </tr>
 
+  <tr>
+    <td>+transition(<code>string</code>)</td>
+    <td>Create a CSS3 transition.</td>
+  </tr>
 </table>
 
 #### Font Stack Variables
@@ -193,7 +193,21 @@ To make life a bit easier, the following **variables `$`** and **mixins `+`** ha
     <td>$xx-large</td>
     <td>55px</td>
   </tr>
+  <tr>
+    <td>$huge</td>
+    <td>72px</td>
+  </tr>
+  <tr>
+    <td>$x-huge</td>
+    <td>89px</td>
+  </tr>
 </table>
+
+#### `@extend` Classes
+There are a number of classes contained in `lib/_extend.sass` that can be used in conjunction with the Sass `@extend` function. Please
+see that file for what's included.
+
+
 <br>
 
 #### Sass Syntax

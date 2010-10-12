@@ -1,9 +1,9 @@
-// ----------------------
-   Hard Tag Reset
-   ----------------------
-a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, footer,
-h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, legend, li, menu,
-nav, ol, p, q, section, select, small, table, textarea, td, th, tr, ul
+// reset.sass | LIBRARY HTML TAG RESET
+
+// Hard Tag Reset
+a, article, aside, blockquote, body, button, dd, dl, dt, fieldset, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, hgroup, html, img, input, label, legend, li, menu, 
+nav, ol, p, section, select, small, table, textarea, td, th, tr, ul
   :font
     :size                     100%
     :style                    normal
@@ -13,39 +13,31 @@ nav, ol, p, q, section, select, small, table, textarea, td, th, tr, ul
   :padding                    0
   :vertical-align             baseline
 
-// ----------------------
-   Setting Blocks
-   ----------------------
-article, aside, footer, header, hgroup, img, label, menu, nav, section
-  :display                    block
+// Setting Blocks
+article, aside, figure, footer, header, hgroup, img, label, menu, nav, section
+  @extend                     .block
 
-// ----------------------
-   Typography
-   ----------------------
+// Typography
 h1, h2, h3, h4, h5, h6, p, table, li, fieldset
   :margin-bottom              $font-size
 
 p
   :line-height                $font-size * 1.55
 
-// ----------------------
-   <body> Reset
-   ----------------------
-body, textarea, input, select, button
+// <body> Reset
+body, textarea, input, option, select, button
   :font-family                $font-family
 
 body
+  :-webkit-text-stroke        1px transparent
   :background                 $background
   :font-size                  $font-size
   :text-rendering             optimizeLegibility
-  :-webkit-text-stroke        1px transparent
 
 body, legend
-  :color                      $color
+  :color                      $colour
 
-// ----------------------
-   Links
-   ----------------------
+// Links
 a, abbr[title]
   :padding-bottom             1px
 
@@ -58,16 +50,12 @@ a
     :color                    $hover_colour
   &:hover, &:focus
     :border-bottom            0
-  &:focus
-    :background               $focus_background
   &:active
     :color                    $active_colour
   img
     :border                   0
 
-// --------------------
-   Tables + Forms
-   --------------------
+// Tables + Forms
 table
   :border
     :collapse                 collapse
@@ -93,6 +81,8 @@ input[type="checkbox"] + label, input[type="radio"] + label
 
 button
   :.vertical-align            middle
+  &::-moz-focus-inner
+    :border                   0  
 
 input
   &[type="submit"], &[type="button"]
@@ -102,28 +92,59 @@ legend
   :.margin-left              -6px
   
 textarea
+  +box-sizing(                border-box)
   :overflow                   auto
   :resize                     none
 
-
-// ----------------------
-   Misc
-   ----------------------
+// Misc
 abbr[title]
   :border-bottom              1px dotted
   :cursor                     help
 
-q
-  :quotes                     none
-  &:before, &:after
-    :content                  ""
-
 ul, ol
   :list-style                 none
   
-// ----------------------
-   Be nice to IE...
-   ----------------------  
+// Be nice to IE...
 a, div, li, li a
-  :zoom                       1
+  @extend                     .zoom
+
+img
+  :-ms-interpolation-mode     bicubic  
+
+// Modern Mobile Devices
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 768px) and (max-device-width: 1024px)  
+  *
+    :-webkit-box-shadow       none  !important
+    :text-shadow              none  !important
+
+  html
+    :-ms-text-size-adjust     none
+    :-webkit
+      :text-size-adjust       none
+      :touch-callout          none
+      :user-select            none
   
+  body
+    :-webkit-text-stroke      0 black      
+  
+  a 
+    :-webkit-tap-highlight-color    rgba(0,0,0,0) 
+    
+// Printing
+@media print
+  body
+    :color                    black !important
+    :background               white !important
+    :font-size                12pt  !important
+  
+  a:after, abbr[title]:after
+    :font-size                75%
+  
+  a:after
+    :content                 " (" attr(href) ") "
+  
+  abbr[title]
+    :border                   0
+    &:after
+      :content               " (" attr(title) ") "    
+    

@@ -1,62 +1,78 @@
-=transition(                              $transition)
-  :transition                             $transition
-  :-moz-transition                        $transition
-  :-webkit-transition                     $transition
+// mixins.sass | LIBRARY MIX-INS
 
-=transform(                               $transform)
-  :transform                              $transform
-  :-moz-transform                         $transform
-  :-webkit-transform                      $transform
+// Quickly outline any tag for debug purposes
+=o
+  :background                             rgba(255, 0, 0, 0.15)   !important
+  :outline                                1px solid red           !important
 
-// If you want to have multiple box shadows, you must enclose the values in quotes (" ").
-=box-shadow(                              $shadow)
-  $shadow:                                unquote($shadow)
-  :box-shadow                             $shadow
-  :-moz-box-shadow                        $shadow
-  :-webkit-box-shadow                     $shadow
+// Cross browser box model resizing
+=box-sizing(                              $box-sizing)
+  :-moz-box-sizing                        $box-sizing
+  :-webkit-box-sizing                     $box-sizing
+  :box-sizing                             $box-sizing
 
-=border-radius(                           $radius)
-  :border-radius                          $radius
-  :-moz-border-radius                     $radius
-  :-webkit-border-radius                  $radius
-=border-radius-top-left(                  $radius)
-  :border-top-left-radius                 $radius
-  :-moz-border-radius-topleft             $radius
-  :-webkit-border-top-left-radius         $radius
-=border-radius-top-right(                 $radius)
-  :border-top-right-radius                $radius
-  :-moz-border-radius-topright            $radius
-  :-webkit-border-top-right-radius        $radius
-=border-radius-bottom-right(              $radius)
-  :border-bottom-right-radius             $radius
-  :-moz-border-radius-bottomright         $radius
-  :-webkit-border-bottom-right-radius     $radius
-=border-radius-bottom-left(               $radius)
-  :border-bottom-left-radius              $radius
-  :-moz-border-radius-bottomleft          $radius
-  :-webkit-border-bottom-left-radius      $radius
-
+// Cross browser opacity
 =opacity(                                 $opacity)
   :-ms-filter                             unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=") + $opacity + unquote(")")
   :filter                                 unquote("alpha(opacity=") + $opacity + unquote(")")
   :opacity                                $opacity * 0.01
 
-// Hide text
-=h(                                       $indent: -9999em)
-  :display                                block
-  :font-size                              0
-  :overflow                               hidden
-  :text
-    :indent                               $indent
-    :transform                            capitalize
-  :white-space                            nowrap
+// Cross browser transition effect
+=transition(                              $transition)
+  :-moz-transition                        $transition
+  :-o-transition                          $transition
+  :-webkit-transition                     $transition
+  :transition                             $transition
 
-// Reset default link styling
-=r
-  :border                                 0
-  :padding                                0
+// Cross browser transform effect
+=transform(                               $transform)
+  :-moz-transform                         $transform
+  :-o-transform                           $transform
+  :-webkit-transform                      $transform
+  :transform                              $transform
 
-// Quickly outline a tag for debug purposes
-=o
-  :background                             rgba(255, 0, 0, 0.15)             !important
-  :outline                                1px solid red                     !important
+// Cross browser multi-column layout
+// # of columns
+=column-count(                            $count)
+  :-moz-column-count                      $count
+  :-webkit-column-count                   $count
+  :column-count                           $count
+// Space between columns
+=column-gap(                              $gap)
+  :-moz-column-gap                        $gap
+  :-webkit-column-gap                     $gap
+  :column-gap                             $gap
+// Combine -count and -gap into one easy mixin  
+=columns(                                 $count, $gap)
+  +column-count(                          $count)  
+  +column-gap(                            $gap)
+
+// Cross browser box shadow
+// If you want to have multiple box shadows, you must enclose the values in quotes (" ").
+=box-shadow(                              $shadow)
+  $shadow:                                unquote($shadow)
+  :-moz-box-shadow                        $shadow
+  :-webkit-box-shadow                     $shadow
+  :box-shadow                             $shadow
+
+// Cross browser rounded corners
+=border-radius(                           $radius)
+  :-moz-border-radius                     $radius
+  :-webkit-border-radius                  $radius
+  :border-radius                          $radius
+=border-radius-top-left(                  $radius)
+  :-moz-border-radius-topleft             $radius
+  :-webkit-border-top-left-radius         $radius
+  :border-top-left-radius                 $radius
+=border-radius-top-right(                 $radius)
+  :-moz-border-radius-topright            $radius
+  :-webkit-border-top-right-radius        $radius
+  :border-top-right-radius                $radius
+=border-radius-bottom-right(              $radius)
+  :-moz-border-radius-bottomright         $radius
+  :-webkit-border-bottom-right-radius     $radius
+  :border-bottom-right-radius             $radius
+=border-radius-bottom-left(               $radius)
+  :-moz-border-radius-bottomleft          $radius
+  :-webkit-border-bottom-left-radius      $radius
+  :border-bottom-left-radius              $radius
